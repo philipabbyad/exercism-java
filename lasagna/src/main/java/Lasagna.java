@@ -3,7 +3,11 @@ public class Lasagna {
         return 40;
     }
 
-    // TODO: define the 'remainingMinutesInOven()' method
+    public int remainingMinutesInOven(int minutesInOven) {
+        Lasagna lasagna = new Lasagna();
+        int minutesRemaining = lasagna.expectedMinutesInOven() - minutesInOven;
+        return minutesRemaining;
+    }
 
     // TODO: define the 'preparationTimeInMinutes()' method
 
