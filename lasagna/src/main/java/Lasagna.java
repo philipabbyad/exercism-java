@@ -5,11 +5,12 @@ public class Lasagna {
 
     public int remainingMinutesInOven(int minutesInOven) {
         Lasagna lasagna = new Lasagna();
-        int minutesRemaining = lasagna.expectedMinutesInOven() - minutesInOven;
-        return minutesRemaining;
+        return (lasagna.expectedMinutesInOven() - minutesInOven);
     }
 
-    // TODO: define the 'preparationTimeInMinutes()' method
+    public int preparationTimeInMinutes(int layers) {
+        return (layers * 2);
+    }
 
     // TODO: define the 'totalTimeInMinutes()' method
 }
