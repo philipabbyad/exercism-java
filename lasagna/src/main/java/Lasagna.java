@@ -3,14 +3,19 @@ public class Lasagna {
         return 40;
     }
 
-    public int remainingMinutesInOven(int minutesInOven) {
+    public int remainingMinutesInOven(int minutesInOvenSoFar) {
         Lasagna lasagna = new Lasagna();
-        return (lasagna.expectedMinutesInOven() - minutesInOven);
+        return (lasagna.expectedMinutesInOven() - minutesInOvenSoFar);
     }
 
-    public int preparationTimeInMinutes(int layers) {
-        return (layers * 2);
+    public int preparationTimeInMinutes(int numberOfLayers) {
+        return (numberOfLayers * 2);
     }
 
-    // TODO: define the 'totalTimeInMinutes()' method
+    public int totalTimeInMinutes(int numberOfLayers, int minutesInOvenSoFar) {
+        Lasagna lasagna = new Lasagna();
+        return (lasagna.preparationTimeInMinutes(numberOfLayers) + minutesInOvenSoFar);
+    }
+
+
 }
