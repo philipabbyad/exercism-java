@@ -1,7 +1,7 @@
 public class LogLevels {
     
     public static String message(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.message() method");
+        return logLine.substring(logLine.indexOf(":") + 1).trim();
     }
 
     public static String logLevel(String logLine) {
