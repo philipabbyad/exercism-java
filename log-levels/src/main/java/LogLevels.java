@@ -5,7 +5,7 @@ public class LogLevels {
     }
 
     public static String logLevel(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.logLevel() method");
+        return logLine.substring(logLine.indexOf("[") + 1, logLine.indexOf("]")).toLowerCase();
     }
 
     public static String reformat(String logLine) {
