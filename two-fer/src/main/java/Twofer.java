@@ -1,5 +1,13 @@
+import static java.lang.String.format;
+
 public class Twofer {
     public String twofer(String name) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        if (name == null) {
+            return format("One for you, one for me.");
+        } else {
+            return format("One for %s, one for me.", name);
+        }
+
     }
+
 }
