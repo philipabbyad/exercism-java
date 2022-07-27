@@ -9,6 +9,6 @@ public class LogLevels {
     }
 
     public static String reformat(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.reformat() method");
+        return message(logLine).concat(" (").concat(logLevel(logLine).concat(")"));
     }
 }
