@@ -1,11 +1,11 @@
 public class LogLevels {
     
     public static String message(String logLine) {
-        return logLine.substring(logLine.indexOf(":") + 1).trim();
+        return logLine.substring(logLine.indexOf(" ")).trim();
     }
 
     public static String logLevel(String logLine) {
-        return logLine.substring(logLine.indexOf("[") + 1, logLine.indexOf("]")).toLowerCase();
+        return logLine.substring(1, logLine.indexOf("]")).toLowerCase();
     }
 
     public static String reformat(String logLine) {

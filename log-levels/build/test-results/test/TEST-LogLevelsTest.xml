@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LogLevelsTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-07-27T18:21:38" hostname="fedora" time="0.032">
+<testsuite name="LogLevelsTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-07-29T22:41:27" hostname="fedora" time="0.033">
   <properties/>
-  <testcase name="message_with_leading_and_trailing_white_space" classname="LogLevelsTest" time="0.03"/>
-  <testcase name="info_message" classname="LogLevelsTest" time="0.0"/>
+  <testcase name="message_with_leading_and_trailing_white_space" classname="LogLevelsTest" time="0.031"/>
+  <testcase name="info_message" classname="LogLevelsTest" time="0.001"/>
   <testcase name="error_message" classname="LogLevelsTest" time="0.0"/>
-  <testcase name="reformat_with_leading_and_trailing_white_space" classname="LogLevelsTest" time="0.001"/>
+  <testcase name="reformat_with_leading_and_trailing_white_space" classname="LogLevelsTest" time="0.0"/>
   <testcase name="info_log_level" classname="LogLevelsTest" time="0.0"/>
   <testcase name="error_reformat" classname="LogLevelsTest" time="0.0"/>
-  <testcase name="error_log_level" classname="LogLevelsTest" time="0.0"/>
+  <testcase name="error_log_level" classname="LogLevelsTest" time="0.001"/>
   <testcase name="info_reformat" classname="LogLevelsTest" time="0.0"/>
   <testcase name="warning_reformat" classname="LogLevelsTest" time="0.0"/>
   <testcase name="warning_log_level" classname="LogLevelsTest" time="0.0"/>
