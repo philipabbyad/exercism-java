@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b9f4801-36a3-4a03-88fe-8d20592ed4d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../annalyns-infiltration/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../annalyns-infiltration/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hello-world/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-world/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hello-world/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-world/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hello-world/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogLevels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogLevels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
