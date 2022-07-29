@@ -4,8 +4,7 @@ public class Lasagna {
     }
 
     public int remainingMinutesInOven(int minutesInOvenSoFar) {
-        Lasagna lasagna = new Lasagna();
-        return (lasagna.expectedMinutesInOven() - minutesInOvenSoFar);
+        return (this.expectedMinutesInOven() - minutesInOvenSoFar);
     }
 
     public int preparationTimeInMinutes(int numberOfLayers) {
@@ -13,8 +12,7 @@ public class Lasagna {
     }
 
     public int totalTimeInMinutes(int numberOfLayers, int minutesInOvenSoFar) {
-        Lasagna lasagna = new Lasagna();
-        return (lasagna.preparationTimeInMinutes(numberOfLayers) + minutesInOvenSoFar);
+        return (this.preparationTimeInMinutes(numberOfLayers) + minutesInOvenSoFar);
     }
 
 
