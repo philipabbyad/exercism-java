@@ -2,7 +2,7 @@ public class Blackjack {
 
     private static final String STAND = "S";
     private static final String HIT = "H";
-    private static final String SPLIT= "P";
+    private static final String SPLIT = "P";
     private static final String WIN = "W";
 
     public int parseCard(String card) {
