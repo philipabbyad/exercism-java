@@ -1,5 +1,11 @@
 class SqueakyClean {
+    private static String cleanIdentifier;
+
     static String clean(String identifier) {
-        throw new UnsupportedOperationException("Please implement the (static) SqueakyClean.clean() method");
+        cleanIdentifier = identifier;
+        if (identifier.contains(" ")) {
+            cleanIdentifier =  identifier.replace(' ', '_');
+        }
+    return cleanIdentifier;
     }
 }
