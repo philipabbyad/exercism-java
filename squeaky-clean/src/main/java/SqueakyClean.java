@@ -22,7 +22,7 @@ class SqueakyClean {
         for (int i = 0; i < cleanIdentifier.length(); i++) {
             int codePoint = cleanIdentifier.codePointAt(i);
             if ((codePoint >= 0 && codePoint <= 31) || (codePoint >= 127 && codePoint <= 159)) {
-                cleanIdentifier = cleanIdentifier.substring(0, i).concat("CTRL").concat(cleanIdentifier.substring(i +1));
+                cleanIdentifier = cleanIdentifier.substring(0, i) + "CTRL" + cleanIdentifier.substring(i +1);
             }
         }
 

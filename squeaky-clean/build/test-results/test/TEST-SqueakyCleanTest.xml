@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SqueakyCleanTest" tests="12" skipped="0" failures="6" errors="0" timestamp="2022-07-30T21:08:52" hostname="fedora" time="0.031">
+<testsuite name="SqueakyCleanTest" tests="12" skipped="0" failures="6" errors="0" timestamp="2022-07-30T21:16:16" hostname="fedora" time="0.044">
   <properties/>
-  <testcase name="keep_only_letters" classname="SqueakyCleanTest" time="0.026">
+  <testcase name="keep_only_letters" classname="SqueakyCleanTest" time="0.032">
     <failure message="org.junit.ComparisonFailure: expected:&lt;&quot;a[]b&quot;&gt; but was:&lt;&quot;a[1&#x1f600;2&#x1f600;3&#x1f600;]b&quot;&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;&quot;a[]b&quot;&gt; but was:&lt;&quot;a[1&#x1f600;2&#x1f600;3&#x1f600;]b&quot;&gt;
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
@@ -53,7 +53,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="omit_lower_case_greek_letters" classname="SqueakyCleanTest" time="0.001">
+  <testcase name="omit_lower_case_greek_letters" classname="SqueakyCleanTest" time="0.0">
     <failure message="org.junit.ComparisonFailure: expected:&lt;&quot;MyΟ[]Finder&quot;&gt; but was:&lt;&quot;MyΟ[βιεγτ]Finder&quot;&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;&quot;MyΟ[]Finder&quot;&gt; but was:&lt;&quot;MyΟ[βιεγτ]Finder&quot;&gt;
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
@@ -106,8 +106,8 @@
 </failure>
   </testcase>
   <testcase name="spaces" classname="SqueakyCleanTest" time="0.0"/>
-  <testcase name="string" classname="SqueakyCleanTest" time="0.001"/>
-  <testcase name="kebab_to_camel_case_no_letter" classname="SqueakyCleanTest" time="0.0">
+  <testcase name="string" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="kebab_to_camel_case_no_letter" classname="SqueakyCleanTest" time="0.001">
     <failure message="org.junit.ComparisonFailure: expected:&lt;&quot;a[]C&quot;&gt; but was:&lt;&quot;a[-1]C&quot;&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;&quot;a[]C&quot;&gt; but was:&lt;&quot;a[-1]C&quot;&gt;
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
@@ -159,7 +159,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="string_with_no_letters" classname="SqueakyCleanTest" time="0.001">
+  <testcase name="string_with_no_letters" classname="SqueakyCleanTest" time="0.0">
     <failure message="java.lang.AssertionError: &#10;Expecting empty but was:&lt;&quot;&#x1f600;&#x1f600;&#x1f600;&quot;&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expecting empty but was:&lt;&quot;&#x1f600;&#x1f600;&#x1f600;&quot;&gt;
 	at SqueakyCleanTest.string_with_no_letters(SqueakyCleanTest.java:39)
@@ -208,7 +208,7 @@ Expecting empty but was:&lt;&quot;&#x1f600;&#x1f600;&#x1f600;&quot;&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="ctrl" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="ctrl" classname="SqueakyCleanTest" time="0.006"/>
   <testcase name="empty" classname="SqueakyCleanTest" time="0.0"/>
   <testcase name="leading_and_trailing_spaces" classname="SqueakyCleanTest" time="0.0"/>
   <testcase name="combine_conversions" classname="SqueakyCleanTest" time="0.001">
