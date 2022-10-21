@@ -3,6 +3,7 @@
 
 #VScode
 .vscode/
+**/bin/
 
 #exercism
 .exercism/
