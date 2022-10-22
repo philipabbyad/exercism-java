@@ -1,7 +1,6 @@
 class SqueakyClean {
     private static String cleanIdentifier;
 
-
     static String clean(String identifier) {
 
         cleanIdentifier = identifier.replaceAll(" ", "_");
@@ -13,7 +12,7 @@ class SqueakyClean {
 
         char[] cleanIdentifierCharArray = cleanIdentifier.toCharArray();
         StringBuilder cleanIdentifierStringBuilder = new StringBuilder();
-        
+
         for (char ch : cleanIdentifierCharArray) {
             if ((Character.isLetter(ch) || ch == '_') && (ch < 'α' || ch > 'ω')) {
                 cleanIdentifierStringBuilder.append(ch);
