@@ -2,12 +2,14 @@
 class BirdWatcher {
     private final int[] birdsPerDay;
 
+    private final int lastWeekCount[] = {0, 2, 5, 3, 7, 8, 4};
+
     public BirdWatcher(int[] birdsPerDay) {
         this.birdsPerDay = birdsPerDay.clone();
     }
 
     public int[] getLastWeek() {
-        throw new UnsupportedOperationException("Please implement the BirdCount.getLastWeek() method");
+        return lastWeekCount;
     }
 
     public int getToday() {
