@@ -21,15 +21,20 @@ class BirdWatcher {
     }
 
     public void incrementTodaysCount() {
-        birdsPerDay[birdsPerDay.length - 1]++;
-        
+        if (birdsPerDay.length > 0) {
+            birdsPerDay[birdsPerDay.length - 1]++;
+        }
     }
 
     public boolean hasDayWithoutBirds() {
         boolean isThereDayWithoutBirds = false;
-        for (int dayCount : birdsPerDay) {
-            if (dayCount == 0) {
-                isThereDayWithoutBirds = true;
+        if (birdsPerDay.length == 0) {
+            isThereDayWithoutBirds = true;
+        } else {
+            for (int dayCount : birdsPerDay) {
+                if (dayCount == 0) {
+                    isThereDayWithoutBirds = true;
+                }
             }
         }
         return isThereDayWithoutBirds;
