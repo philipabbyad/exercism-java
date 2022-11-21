@@ -10,7 +10,8 @@ public class SalaryCalculator {
     }
 
     public double bonusForProductSold(int productsSold) {
-        throw new UnsupportedOperationException("Please implement the SalaryCalculator.bonusForProductSold() method");
+        double bonus = productsSold * this.multiplierPerProductsSold(productsSold);
+        return bonus;
     }
 
     public double finalSalary(int daysSkipped, int productsSold) {
