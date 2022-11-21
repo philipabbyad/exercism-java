@@ -16,7 +16,7 @@ public class SalaryCalculator {
 
     public double finalSalary(int daysSkipped, int productsSold) {
         double salary = 1000.00 * this.multiplierPerDaysSkipped(daysSkipped) + bonusForProductSold(productsSold);
-        salary = (salary < 2000.00) ? salary : 2000.00;
+        salary = Math.min(salary, 2000.00);
         return salary;
     } 
 }
