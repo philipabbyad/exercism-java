@@ -38,6 +38,12 @@ public class LanguageList {
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+        boolean isLanguageListExciting = false;
+        for (String languageInList : this.languages) {
+            if (languageInList == "Java" || languageInList == "Kotlin") {
+                isLanguageListExciting = true;
+            }
+        }
+        return isLanguageListExciting;
     }
 }
