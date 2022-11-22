@@ -30,9 +30,7 @@ public class LanguageList {
     public boolean containsLanguage(String language) {
         boolean containsLanguage = false;
         for (String languageInList : languages) {
-            if (languageInList == language) {
-                containsLanguage = true;
-            }
+            containsLanguage = (languageInList == language) ? true : false;
         }
         return containsLanguage;
     }
