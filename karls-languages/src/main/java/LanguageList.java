@@ -5,7 +5,8 @@ public class LanguageList {
     private final List<String> languages = new ArrayList<>();
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Please implement the isEmpty() method");
+        boolean isLanguageListEmpty = (languages.size() == 0);
+        return isLanguageListEmpty;
     }
 
     public void addLanguage(String language) {
