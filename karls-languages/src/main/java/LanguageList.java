@@ -28,7 +28,13 @@ public class LanguageList {
     }
 
     public boolean containsLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the containsLanguage() method");
+        boolean containsLanguage = false;
+        for (String languageInList : languages) {
+            if (languageInList == language) {
+                containsLanguage = true;
+            }
+        }
+        return containsLanguage;
     }
 
     public boolean isExciting() {
