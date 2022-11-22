@@ -18,7 +18,8 @@ public class LanguageList {
     }
 
     public String firstLanguage() {
-        throw new UnsupportedOperationException("Please implement the firstLanguage() method");
+        String firstLanguage = (!this.isEmpty()) ? languages.get(0) : "Language list is empty!";
+        return firstLanguage;
     }
 
     public int count() {
