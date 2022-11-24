@@ -32,6 +32,7 @@ public class LanguageList {
         for (String languageInList : languages) {
             if (languageInList == language) {
                 containsLanguage = true;
+                break;
             }
         }
         return containsLanguage;
@@ -42,6 +43,7 @@ public class LanguageList {
         for (String languageInList : languages) {
             if (languageInList == "Java" || languageInList == "Kotlin") {
                 isLanguageListExciting = true;
+                break;
             }
         }
         return isLanguageListExciting;
