@@ -20,7 +20,8 @@ class Scrabble {
     }
 
     int getScore() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        int wordScore = 0;
+        return wordScore;
     }
 
 }
