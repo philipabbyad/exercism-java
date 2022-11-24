@@ -21,6 +21,14 @@ class Scrabble {
 
     int getScore() {
         int wordScore = 0;
+        char[] wordCharacterArray = this.word.toUpperCase().toCharArray();
+        for (char wordCharacter : wordCharacterArray) {
+            // Loop through each key of HashMap to see if the character exists in that key?
+            // If so, get value and add to wordScore
+            for () {
+
+            }
+        }
         return wordScore;
     }
 
