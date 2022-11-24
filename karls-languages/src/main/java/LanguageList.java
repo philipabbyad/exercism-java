@@ -39,7 +39,7 @@ public class LanguageList {
 
     public boolean isExciting() {
         boolean isLanguageListExciting = false;
-        for (String languageInList : this.languages) {
+        for (String languageInList : languages) {
             if (languageInList == "Java" || languageInList == "Kotlin") {
                 isLanguageListExciting = true;
             }
