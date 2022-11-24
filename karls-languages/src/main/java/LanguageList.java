@@ -18,7 +18,7 @@ public class LanguageList {
     }
 
     public String firstLanguage() {
-        String firstLanguage = (!this.isEmpty()) ? languages.get(0) : "Language list is empty!";
+        String firstLanguage = languages.get(0);
         return firstLanguage;
     }
 
