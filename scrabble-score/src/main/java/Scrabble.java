@@ -23,10 +23,10 @@ class Scrabble {
         int wordScore = 0;
         char[] wordCharacterArray = this.word.toUpperCase().toCharArray();
         for (char wordCharacter : wordCharacterArray) {
-            // Loop through each key of HashMap to see if the character exists in that key?
-            // If so, get value and add to wordScore
-            for () {
-
+            for (HashMap.Entry<List<Character>, Integer> scrabbleLetterValue : scrabbleLetterValues.entrySet()) {
+                if (scrabbleLetterValue.getKey().contains(wordCharacter)) {
+                    wordScore += scrabbleLetterValue.getValue();
+                }
             }
         }
         return wordScore;
