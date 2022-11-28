@@ -6,10 +6,9 @@ class Scrabble {
 
     private String word = "";
 
-    static final public HashMap<List<Character>, Integer> SCRABBLE_LETTER_VALUES = new HashMap<>();
+    private static final HashMap<List<Character>, Integer> SCRABBLE_LETTER_VALUES = new HashMap<>();
 
-    public Scrabble(String word) {
-        this.word = word;
+    static {
         SCRABBLE_LETTER_VALUES.put(Arrays.asList('A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'), 1);
         SCRABBLE_LETTER_VALUES.put(Arrays.asList('D', 'G'), 2);
         SCRABBLE_LETTER_VALUES.put(Arrays.asList('B', 'C', 'M', 'P'), 3);
@@ -17,6 +16,10 @@ class Scrabble {
         SCRABBLE_LETTER_VALUES.put(Arrays.asList('K'), 5);
         SCRABBLE_LETTER_VALUES.put(Arrays.asList('J', 'X'), 8);
         SCRABBLE_LETTER_VALUES.put(Arrays.asList('Q', 'Z'), 10);
+    }
+
+    public Scrabble(String word) {
+        this.word = word;
     }
 
     int getScore() {
