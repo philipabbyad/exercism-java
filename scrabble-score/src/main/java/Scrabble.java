@@ -29,6 +29,7 @@ class Scrabble {
             for (HashMap.Entry<List<Character>, Integer> scrabbleLetterValue : SCRABBLE_LETTER_VALUES.entrySet()) {
                 if (scrabbleLetterValue.getKey().contains(wordCharacter)) {
                     wordScore += scrabbleLetterValue.getValue();
+                    break;
                 }
             }
         }
