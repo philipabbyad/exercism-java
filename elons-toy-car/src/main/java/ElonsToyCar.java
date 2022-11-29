@@ -19,6 +19,7 @@ public class ElonsToyCar {
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the (static) RemoteControlCar.drive()  method");
+        distanceDriven += 20;
+        batteryPercentageRemaining -= 1;
     }
 }
