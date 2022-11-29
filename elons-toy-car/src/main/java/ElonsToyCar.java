@@ -14,12 +14,14 @@ public class ElonsToyCar {
     }
 
     public String batteryDisplay() {
-        String batteryDisplayMessage = "Battery at " + batteryPercentageRemaining + "%";
+        String batteryDisplayMessage = (batteryPercentageRemaining < 1) ? "Battery empty" : "Battery at " + batteryPercentageRemaining + "%";
         return batteryDisplayMessage;
     }
 
     public void drive() {
-        distanceDriven += 20;
-        batteryPercentageRemaining -= 1;
+        if (batteryPercentageRemaining >= 1) {
+            distanceDriven += 20;
+            batteryPercentageRemaining -= 1;
+        }
     }
 }
