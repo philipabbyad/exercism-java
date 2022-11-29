@@ -2,6 +2,8 @@ public class ElonsToyCar {
 
     private int distanceDriven = 0;
     private int batteryPercentageRemaining = 100;
+    private static final int DISTANCE_EACH_DRIVE = 20;
+    private static final int BATTERY_PERCENTAGE_DRAIN_EACH_DRIVE = 1;
 
 
     public static ElonsToyCar buy() {
@@ -20,8 +22,8 @@ public class ElonsToyCar {
 
     public void drive() {
         if (batteryPercentageRemaining >= 1) {
-            distanceDriven += 20;
-            batteryPercentageRemaining -= 1;
+            distanceDriven += DISTANCE_EACH_DRIVE;
+            batteryPercentageRemaining -= BATTERY_PERCENTAGE_DRAIN_EACH_DRIVE;
         }
     }
 }
