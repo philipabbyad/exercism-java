@@ -15,12 +15,12 @@ public class ElonsToyCar {
     }
 
     public String distanceDisplay() {
-        String distanceDisplayMessage = "Driven " + distanceDriven + " meters";
+        String distanceDisplayMessage = String.format("Driven %d meters", distanceDriven) ;
         return distanceDisplayMessage;
     }
 
     public String batteryDisplay() {
-        String batteryDisplayMessage = (batteryPercentageRemaining < 1) ? "Battery empty" : "Battery at " + batteryPercentageRemaining + "%";
+        String batteryDisplayMessage = (batteryPercentageRemaining < 1) ? "Battery empty" : String.format("Battery at %d%%", batteryPercentageRemaining);
         return batteryDisplayMessage;
     }
 
