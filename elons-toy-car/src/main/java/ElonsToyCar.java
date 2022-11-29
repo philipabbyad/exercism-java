@@ -1,10 +1,14 @@
 public class ElonsToyCar {
 
-    private int distanceDriven = 0;
-    private int batteryPercentageRemaining = 100;
+    private int distanceDriven;
+    private int batteryPercentageRemaining;
     private static final int DISTANCE_EACH_DRIVE = 20;
     private static final int BATTERY_PERCENTAGE_DRAIN_EACH_DRIVE = 1;
 
+    public ElonsToyCar() {
+        this.distanceDriven = 0;
+        this.batteryPercentageRemaining = 100;
+    }
 
     public static ElonsToyCar buy() {
         return new ElonsToyCar();
