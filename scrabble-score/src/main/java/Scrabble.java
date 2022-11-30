@@ -5,6 +5,7 @@ import java.util.List;
 class Scrabble {
 
     private String word = "";
+    private int wordScore;
 
     private static final HashMap<List<Character>, Integer> SCRABBLE_LETTER_VALUES = new HashMap<>();
 
@@ -20,10 +21,10 @@ class Scrabble {
 
     public Scrabble(String word) {
         this.word = word;
+        wordScore = this.scoreWord();
     }
 
-    int getScore() {
-        int wordScore = 0;
+    public int scoreWord() {
         char[] wordCharacterArray = this.word.toUpperCase().toCharArray();
         for (char wordCharacter : wordCharacterArray) {
             for (HashMap.Entry<List<Character>, Integer> scrabbleLetterValue : SCRABBLE_LETTER_VALUES.entrySet()) {
@@ -33,6 +34,10 @@ class Scrabble {
                 }
             }
         }
+        return wordScore;
+    }
+
+    int getScore() {
         return wordScore;
     }
 
