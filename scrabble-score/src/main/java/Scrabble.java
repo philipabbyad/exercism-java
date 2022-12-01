@@ -5,7 +5,7 @@ import java.util.List;
 class Scrabble {
 
     private String word = "";
-    private int wordScore;
+    private final int wordScore;
 
     private static final HashMap<List<Character>, Integer> SCRABBLE_LETTER_VALUES = new HashMap<>();
 
