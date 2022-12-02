@@ -11,7 +11,8 @@ class NeedForSpeed {
     }
 
     public boolean batteryDrained() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.batteryDrained() method");
+        boolean isBatteryDrained = (batteryPercentageRemaining < batteryDrain); 
+        return isBatteryDrained;
     }
 
     public int distanceDriven() {
