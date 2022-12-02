@@ -3,6 +3,7 @@ class NeedForSpeed {
     private int speed;
     private int batteryDrain;
     private int distanceDriven;
+    private int batteryPercentageRemaining = 100;
 
     public NeedForSpeed(int speed, int batteryDrain) {
         this.speed = speed;
@@ -19,6 +20,8 @@ class NeedForSpeed {
 
     public void drive() {
         distanceDriven += speed;
+        batteryPercentageRemaining -= batteryDrain;
+
     }
 
     public static NeedForSpeed nitro() {
