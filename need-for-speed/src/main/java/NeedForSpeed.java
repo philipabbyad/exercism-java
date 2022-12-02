@@ -20,8 +20,10 @@ class NeedForSpeed {
     }
 
     public void drive() {
-        distanceDriven += speed;
-        batteryPercentageRemaining -= batteryDrain;
+        if (!this.batteryDrained()) {
+            distanceDriven += speed;
+            batteryPercentageRemaining -= batteryDrain;
+        }
 
     }
 
