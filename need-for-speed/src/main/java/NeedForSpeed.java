@@ -1,17 +1,17 @@
 class NeedForSpeed {
     
     private int speed;
-    private int batteryDrain;
+    private int batteryDrainPercentage;
     private int distanceDriven;
     private int batteryPercentageRemaining = 100;
 
-    public NeedForSpeed(int speed, int batteryDrain) {
+    public NeedForSpeed(int speed, int batteryDrainPercentage) {
         this.speed = speed;
-        this.batteryDrain = batteryDrain;
+        this.batteryDrainPercentage = batteryDrainPercentage;
     }
 
     public boolean batteryDrained() {
-        boolean isBatteryDrained = (batteryPercentageRemaining < batteryDrain); 
+        boolean isBatteryDrained = (batteryPercentageRemaining < batteryDrainPercentage); 
         return isBatteryDrained;
     }
 
@@ -22,13 +22,14 @@ class NeedForSpeed {
     public void drive() {
         if (!this.batteryDrained()) {
             distanceDriven += speed;
-            batteryPercentageRemaining -= batteryDrain;
+            batteryPercentageRemaining -= batteryDrainPercentage;
         }
 
     }
 
     public static NeedForSpeed nitro() {
-        throw new UnsupportedOperationException("Please implement the (static) NeedForSpeed.nitro() method");
+        NeedForSpeed nitroCar = new NeedForSpeed(50, 4);
+        return nitroCar;
     }
 }
 
