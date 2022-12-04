@@ -42,6 +42,8 @@ class RaceTrack {
     }
 
     public boolean tryFinishTrack(NeedForSpeed car) {
-        throw new UnsupportedOperationException("Please implement the RaceTrack.tryFinishTrack() method");
+        boolean canCarFinishTrack = false;
+
+        return canCarFinishTrack;
     }
 }
