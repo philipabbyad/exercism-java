@@ -25,16 +25,17 @@ class Scrabble {
     }
 
     public int scoreWord() {
+        int calculatedWordScore = 0;
         char[] wordCharacterArray = this.word.toUpperCase().toCharArray();
         for (char wordCharacter : wordCharacterArray) {
             for (HashMap.Entry<List<Character>, Integer> scrabbleLetterValue : SCRABBLE_LETTER_VALUES.entrySet()) {
                 if (scrabbleLetterValue.getKey().contains(wordCharacter)) {
-                    wordScore += scrabbleLetterValue.getValue();
+                    calculatedWordScore += scrabbleLetterValue.getValue();
                     break;
                 }
             }
         }
-        return wordScore;
+        return calculatedWordScore;
     }
 
     int getScore() {
