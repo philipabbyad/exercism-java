@@ -50,7 +50,7 @@ class RaceTrack {
                 break;
             }
         }
-        if (trackDistanceRemaining <= 0) {
+        if ((trackDistanceRemaining - car.distanceDriven()) <= 0) {
             canCarFinishTrack = true;
         }
         return canCarFinishTrack;
