@@ -31,7 +31,8 @@ public class FootballMatchReports {
             case 11:
                 playerPosition = "right wing";
                 break;
-            default: break;
+            default:
+                throw new IllegalArgumentException();
         }
 
            
