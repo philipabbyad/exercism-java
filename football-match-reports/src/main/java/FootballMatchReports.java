@@ -32,10 +32,9 @@ public class FootballMatchReports {
                 playerPosition = "right wing";
                 break;
             default:
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Shirt Number Must Be Within Range of 1-11");
         }
-
-           
+        
         return playerPosition;
     }
 }
