@@ -1,40 +1,28 @@
 public class FootballMatchReports {    
     
     public static String onField(int shirtNum) {
-        String playerPosition = "";
-
         switch (shirtNum) {
             case 1:
-                playerPosition = "goalie";
-                break;
+                return "goalie";
             case 2:
-                playerPosition = "left back";
-                break;
+                return "left back";
             case 3:
             case 4:
-                playerPosition = "center back";
-                break;
+                return "center back";
             case 5:
-                playerPosition = "right back";
-                break;
+                return "right back";
             case 6:
             case 7:
             case 8:
-                playerPosition = "midfielder";
-                break;
+                return "midfielder";
             case 9:
-                playerPosition = "left wing";
-                break;
+                return "left wing";
             case 10:
-                playerPosition = "striker";
-                break;
+                return "striker";
             case 11:
-                playerPosition = "right wing";
-                break;
+                return "right wing";
             default:
                 throw new IllegalArgumentException("Shirt Number Must Be Within Range of 1-11");
         }
-        
-        return playerPosition;
     }
 }
