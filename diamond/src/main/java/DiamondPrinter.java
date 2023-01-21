@@ -17,13 +17,14 @@ class DiamondPrinter {
 
         for (int rowNum = 1; rowNum == (numRows + 1)/2; rowNum++ ) {
             StringBuilder rowOutput = new StringBuilder();
-            char rowLetter = rowNum + 40;
+            int rowLetterValue = rowNum + 40;
+            char rowLetter = Character.toChars(rowLetterValue)[0];
 
-            rowOutput.append(createSpaces(letterValue - rowNum));
+            rowOutput.append(createSpaces(rowLetterValue - rowNum));
             rowOutput.append(rowLetter);
             rowOutput.append(createSpaces((rowLetter) - 3));
             rowOutput.append(rowLetter);
-            rowOutput.append(createSpaces(letterValue - rowNum));
+            rowOutput.append(createSpaces(rowLetterValue - rowNum));
 
             diamondOutput.add(rowOutput.toString());
         }
