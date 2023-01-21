@@ -25,9 +25,7 @@ class DiamondPrinter {
             diamondOutput.add(rowOutput.toString());
         }
 
-        
-
-        for (int rowNum = 2; rowNum <= ((numRows + 1) / 2); rowNum++ ) {
+        for (int rowNum = 2; rowNum <= ((numRows + 1) / 2); rowNum++) {
             StringBuilder rowOutput = new StringBuilder();
             int rowLetterValue = rowNum + 64;
             char rowLetter = Character.toChars(rowLetterValue)[0];
@@ -41,6 +39,32 @@ class DiamondPrinter {
             diamondOutput.add(rowOutput.toString());
         }
 
+        for (int rowNum = (((numRows + 1) / 2) - 1); rowNum >= 2; rowNum--) {
+            StringBuilder rowOutput = new StringBuilder();
+            int rowLetterValue = rowNum + 64;
+            char rowLetter = Character.toChars(rowLetterValue)[0];
+
+            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
+            rowOutput.append(rowLetter);
+            rowOutput.append(createSpaces((rowNum * 2) - 3));
+            rowOutput.append(rowLetter);
+            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
+
+            diamondOutput.add(rowOutput.toString());
+        }
+
+        if (numRows > 1) {
+            for (int rowNum = 1; rowNum <= 1; rowNum++ ) {
+                StringBuilder rowOutput = new StringBuilder();
+    
+                rowOutput.append(createSpaces(enteredLetterValue - rowNum));
+                rowOutput.append('A');
+                rowOutput.append(createSpaces(enteredLetterValue - rowNum));
+    
+                diamondOutput.add(rowOutput.toString());
+            }
+        }
+
         return diamondOutput;
     }
 
@@ -48,20 +72,14 @@ class DiamondPrinter {
         StringBuilder spaceString = new StringBuilder();
         
         for (int spaceIndex = 0; spaceIndex < numSpaces; spaceIndex++ ) {
-            spaceString.append('-');
+            spaceString.append(' ');
         }
 
         return spaceString.toString();
     }
-    
-
 
     public static void main(String[] args) {
         DiamondPrinter test = new DiamondPrinter();
         System.out.println(test.printToList('E'));
 	}
-
-
 }
-
-
