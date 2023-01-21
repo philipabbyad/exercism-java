@@ -18,7 +18,7 @@ public class AnagramTest {
             .isEmpty();
     }
 
-    @Ignore("Remove to run test")
+
     @Test
     public void testDetectMultipleAnagrams() {
         Anagram detector = new Anagram("master");
