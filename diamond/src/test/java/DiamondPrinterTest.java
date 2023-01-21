@@ -19,7 +19,7 @@ public class DiamondPrinterTest {
             .containsExactly("A");
     }
 
-    @Ignore("Remove to run test")
+
     @Test
     public void testTwoByTwoDiamond() {
         assertThat(diamondPrinter.printToList('B'))
@@ -29,7 +29,6 @@ public class DiamondPrinterTest {
                 " A ");
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void testThreeByThreeDiamond() {
         assertThat(diamondPrinter.printToList('C'))
