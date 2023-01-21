@@ -13,11 +13,11 @@ class Anagram {
 
     public List<String> match(List<String> wordListToTestAgainst) {
         List<String> anagramMatches = new ArrayList<>();
-        HashMap<Character, Integer> letterCountWordToTest = createMapOfLetters(wordToTest.toUpperCase().toCharArray());
+        HashMap<Character, Integer> letterCountOfWordToTest = createMapOfLetters(wordToTest.toUpperCase().toCharArray());
 
         for (String wordToTestAgainst : wordListToTestAgainst) {
-            HashMap<Character, Integer> letterCountWordToTestAgainst = createMapOfLetters(wordToTestAgainst.toUpperCase().toCharArray());
-            if (letterCountWordToTest.equals(letterCountWordToTestAgainst) && !wordToTest.toUpperCase().equals(wordToTestAgainst.toUpperCase())) {
+            HashMap<Character, Integer> letterCountOfWordToTestAgainst = createMapOfLetters(wordToTestAgainst.toUpperCase().toCharArray());
+            if (letterCountOfWordToTest.equals(letterCountOfWordToTestAgainst) && !wordToTest.toUpperCase().equals(wordToTestAgainst.toUpperCase())) {
                 anagramMatches.add(wordToTestAgainst);
             }
         }
