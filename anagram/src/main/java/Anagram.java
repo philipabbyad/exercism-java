@@ -17,7 +17,7 @@ class Anagram {
 
         for (String wordToTestAgainst : wordListToTestAgainst) {
             HashMap<Character, Integer> letterCountWordToTestAgainst = createMapOfLetters(wordToTestAgainst.toUpperCase().toCharArray());
-            if (letterCountWordToTest.equals(letterCountWordToTestAgainst)) {
+            if (letterCountWordToTest.equals(letterCountWordToTestAgainst) && !wordToTest.toUpperCase().equals(wordToTestAgainst.toUpperCase())) {
                 anagramMatches.add(wordToTestAgainst);
             }
         }
@@ -38,7 +38,6 @@ class Anagram {
 
     public static void main(String[] args) {
         Anagram test = new Anagram("owns");
-        System.out.println(test.match(Arrays.asList("stream", "pigeon", "snow", "maters")));
+        System.out.println(test.match(Arrays.asList("stream", "pigeon", "snOw", "maters", "owns")));
     }
-
 }
