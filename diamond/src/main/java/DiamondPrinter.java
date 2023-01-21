@@ -67,6 +67,8 @@ class DiamondPrinter {
 
     public static void main(String[] args) {
         DiamondPrinter test = new DiamondPrinter();
-        System.out.println(test.printToList('E'));
+        for (String row : test.printToList('Z')) {
+            System.out.println(row);
+        }
 	}
 }
