@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 class DiamondPrinter {
+    private int enteredLetterValue = 0;
+    private int numRows = 0;
+    private List<String> diamondOutput = new ArrayList<String>();
 
-    List<String> printToList(char letter) {
-        int enteredLetterValue = 0;
-        int numRows = 0;
-        List<String> diamondOutput = new ArrayList<String>();
+    public List<String> printToList(char letter) {
 
         if (!Character.isLetter(letter)) {
             throw new IllegalArgumentException("Must enter a single letter A-Z");
@@ -15,60 +15,47 @@ class DiamondPrinter {
         enteredLetterValue = Character.toUpperCase(letter) - 64;
         numRows = (enteredLetterValue * 2) - 1;
 
-        for (int rowNum = 1; rowNum <= 1; rowNum++ ) {
-            StringBuilder rowOutput = new StringBuilder();
-
-            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-            rowOutput.append('A');
-            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-
-            diamondOutput.add(rowOutput.toString());
-        }
+        diamondOutput.add(createLetterARow());
 
         for (int rowNum = 2; rowNum <= ((numRows + 1) / 2); rowNum++) {
-            StringBuilder rowOutput = new StringBuilder();
-            int rowLetterValue = rowNum + 64;
-            char rowLetter = Character.toChars(rowLetterValue)[0];
-
-            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-            rowOutput.append(rowLetter);
-            rowOutput.append(createSpaces((rowNum * 2) - 3));
-            rowOutput.append(rowLetter);
-            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-
-            diamondOutput.add(rowOutput.toString());
+            diamondOutput.add(createAnyOtherLetterRow(rowNum));
         }
 
         for (int rowNum = (((numRows + 1) / 2) - 1); rowNum >= 2; rowNum--) {
-            StringBuilder rowOutput = new StringBuilder();
-            int rowLetterValue = rowNum + 64;
-            char rowLetter = Character.toChars(rowLetterValue)[0];
-
-            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-            rowOutput.append(rowLetter);
-            rowOutput.append(createSpaces((rowNum * 2) - 3));
-            rowOutput.append(rowLetter);
-            rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-
-            diamondOutput.add(rowOutput.toString());
+            diamondOutput.add(createAnyOtherLetterRow(rowNum));
         }
 
         if (numRows > 1) {
-            for (int rowNum = 1; rowNum <= 1; rowNum++ ) {
-                StringBuilder rowOutput = new StringBuilder();
-    
-                rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-                rowOutput.append('A');
-                rowOutput.append(createSpaces(enteredLetterValue - rowNum));
-    
-                diamondOutput.add(rowOutput.toString());
-            }
+            diamondOutput.add(createLetterARow());
         }
 
         return diamondOutput;
     }
 
-    String createSpaces(int numSpaces) {
+    public String createLetterARow() {
+        StringBuilder rowOutput = new StringBuilder();
+
+        rowOutput.append(createSpaces(this.enteredLetterValue - 1));
+        rowOutput.append('A');
+        rowOutput.append(createSpaces(this.enteredLetterValue - 1));
+
+        return rowOutput.toString();
+    }
+
+    public String createAnyOtherLetterRow(int rowNum) {
+        StringBuilder rowOutput = new StringBuilder();
+        char rowLetter = Character.toChars(rowNum + 64)[0];
+
+        rowOutput.append(createSpaces(this.enteredLetterValue - rowNum));
+        rowOutput.append(rowLetter);
+        rowOutput.append(createSpaces((rowNum * 2) - 3));
+        rowOutput.append(rowLetter);
+        rowOutput.append(createSpaces(this.enteredLetterValue - rowNum));
+
+        return rowOutput.toString();
+    }
+
+    public String createSpaces(int numSpaces) {
         StringBuilder spaceString = new StringBuilder();
         
         for (int spaceIndex = 0; spaceIndex < numSpaces; spaceIndex++ ) {
