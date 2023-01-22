@@ -1,7 +1,24 @@
 class RaindropConverter {
 
     String convert(int number) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
-    }
+        String rainDropSounds = "";
 
+        if (number % 3 == 0) {
+            rainDropSounds = rainDropSounds + "Pling";
+        }
+
+        if (number % 5 == 0) {
+            rainDropSounds = rainDropSounds + "Plang";
+        }
+
+        if (number % 7 == 0) {
+            rainDropSounds = rainDropSounds + "Plong";
+        }
+
+        if (rainDropSounds.isEmpty()) {
+            rainDropSounds = Integer.toString(number);
+        }
+
+        return rainDropSounds;
+    }
 }
