@@ -4,15 +4,15 @@ class RaindropConverter {
         String rainDropSounds = "";
 
         if (number % 3 == 0) {
-            rainDropSounds = rainDropSounds + "Pling";
+            rainDropSounds += "Pling";
         }
 
         if (number % 5 == 0) {
-            rainDropSounds = rainDropSounds + "Plang";
+            rainDropSounds += "Plang";
         }
 
         if (number % 7 == 0) {
-            rainDropSounds = rainDropSounds + "Plong";
+            rainDropSounds += "Plong";
         }
 
         if (rainDropSounds.isEmpty()) {
