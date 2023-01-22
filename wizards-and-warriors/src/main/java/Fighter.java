@@ -6,7 +6,7 @@ abstract class Fighter {
     }
 
     boolean isVulnerable() {
-        throw new UnsupportedOperationException("Please provide implementation for this method");
+        return false;
     }
 
     abstract int damagePoints(Fighter fighter);
@@ -23,9 +23,11 @@ class Warrior extends Fighter {
 
 class Wizard extends Fighter {
 
+    boolean isSpellPrepared = false;
+
     @Override
     boolean isVulnerable() {
-        throw new UnsupportedOperationException("Please implement Wizard.isVulnerable() method");
+        return !isSpellPrepared;
     }
 
     @Override
@@ -34,7 +36,7 @@ class Wizard extends Fighter {
     }
 
     void prepareSpell() {
-        throw new UnsupportedOperationException("Please implement Wizard.prepareSpell() method");
+        isSpellPrepared = true;
     }
 
 }
