@@ -30,7 +30,6 @@ public class BookStoreTest {
             .isCloseTo(8.00, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void twoOfSameBook() {
         List<Integer> books = Arrays.asList(2, 2);
@@ -38,7 +37,6 @@ public class BookStoreTest {
             .isCloseTo(16.00, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void emptyBasket() {
         List<Integer> books = Collections.emptyList();
@@ -46,7 +44,6 @@ public class BookStoreTest {
             .isCloseTo(0.00, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void twoDifferentBooks() {
         List<Integer> books = Arrays.asList(1, 2);
@@ -54,7 +51,6 @@ public class BookStoreTest {
             .isCloseTo(15.20, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void threeDifferentBooks() {
         List<Integer> books = Arrays.asList(1, 2, 3);
@@ -62,7 +58,6 @@ public class BookStoreTest {
             .isCloseTo(21.60, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void fourDifferentBooks() {
         List<Integer> books = Arrays.asList(1, 2, 3, 4);
@@ -70,7 +65,6 @@ public class BookStoreTest {
             .isCloseTo(25.60, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void fiveDifferentBooks() {
         List<Integer> books = Arrays.asList(1, 2, 3, 4, 5);
@@ -78,7 +72,6 @@ public class BookStoreTest {
             .isCloseTo(30.00, Assertions.offset(EQUALITY_TOLERANCE));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void twoGroupsOfFourIsCheaperThanGroupOfFivePlusGroupOfThree() {
         List<Integer> books = Arrays.asList(1, 1, 2, 2, 3, 3, 4, 5);
