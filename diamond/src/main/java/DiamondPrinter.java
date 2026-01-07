@@ -2,55 +2,57 @@ import java.util.ArrayList;
 import java.util.List;
 
 class DiamondPrinter {
-    private int enteredLetterValue = 0;
+    private int letterAlphabetPosition = 0;
     private int numRows = 0;
     private List<String> diamondOutput = new ArrayList<String>();
 
     public List<String> printToList(char letter) {
 
-        if (!Character.isLetter(letter)) {
+        if (!Character.isLetter(letter)) { // Only letters are expected in the input
             throw new IllegalArgumentException("Must enter a single letter A-Z");
         }
 
-        enteredLetterValue = Character.toUpperCase(letter) - 64;
-        numRows = (enteredLetterValue * 2) - 1;
+        letterAlphabetPosition = Character.toUpperCase(letter) - 64; // Normalize case needed for alphabet position based on ASCII
+        numRows = (letterAlphabetPosition * 2) - 1;
 
-        diamondOutput.add(createLetterARow());
+        diamondOutput.add(createSingleLetterRowWithLetterA());
 
+        // Top half: ascend from B to the widest letter
         for (int rowNum = 2; rowNum <= ((numRows + 1) / 2); rowNum++) {
-            diamondOutput.add(createAnyOtherLetterRow(rowNum));
+            diamondOutput.add(createRowWithAnyOtherLetter(rowNum));
         }
 
+        // Bottom half: descend back to B (mirrors top half for vertical symmetry)
         for (int rowNum = (((numRows + 1) / 2) - 1); rowNum >= 2; rowNum--) {
-            diamondOutput.add(createAnyOtherLetterRow(rowNum));
+            diamondOutput.add(createRowWithAnyOtherLetter(rowNum));
         }
 
         if (numRows > 1) {
-            diamondOutput.add(createLetterARow());
+            diamondOutput.add(createSingleLetterRowWithLetterA());
         }
 
         return diamondOutput;
     }
 
-    public String createLetterARow() {
+    public String createSingleLetterRowWithLetterA() {
         StringBuilder rowOutput = new StringBuilder();
 
-        rowOutput.append(createSpaces(this.enteredLetterValue - 1));
+        rowOutput.append(createSpaces(this.letterAlphabetPosition - 1));
         rowOutput.append('A');
-        rowOutput.append(createSpaces(this.enteredLetterValue - 1));
+        rowOutput.append(createSpaces(this.letterAlphabetPosition - 1));
 
         return rowOutput.toString();
     }
 
-    public String createAnyOtherLetterRow(int rowNum) {
+    public String createRowWithAnyOtherLetter(int rowNum) {
         StringBuilder rowOutput = new StringBuilder();
         char rowLetter = Character.toChars(rowNum + 64)[0];
 
-        rowOutput.append(createSpaces(this.enteredLetterValue - rowNum));
+        rowOutput.append(createSpaces(this.letterAlphabetPosition - rowNum));
         rowOutput.append(rowLetter);
         rowOutput.append(createSpaces((rowNum * 2) - 3));
         rowOutput.append(rowLetter);
-        rowOutput.append(createSpaces(this.enteredLetterValue - rowNum));
+        rowOutput.append(createSpaces(this.letterAlphabetPosition - rowNum));
 
         return rowOutput.toString();
     }
